@@ -1,0 +1,1172 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+<style>
+#loadpagediv{
+	background-color: #0094ff;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100px;
+	width: 100px;
+	margin-top: -50px;
+	margin-left: -50px;
+}
+.object{
+	position: absolute;
+	height: 10px;
+	width: 50px;		
+	background-color: #FFF;
+}	
+.object:nth-child(2n+0) {
+	-webkit-animation: animate_right 2s infinite;
+	animation: animate_right 2s infinite;
+}
+.object:nth-child(2n+1) {
+	-webkit-animation: animate_left 2s infinite;
+	animation: animate_left 2s infinite;
+}		
+.object:nth-child(1){
+	top: 0px;
+	left: 0px;	
+	}
+.object:nth-child(2){
+	top: 0px;
+	left: 50px;
+	}
+.object:nth-child(3){
+	top: 10px;
+	left: 0px;	
+	-webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;	
+	}
+.object:nth-child(4){
+	top: 10px;
+	left: 50px;
+	-webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;	
+	}
+.object:nth-child(5){
+	top: 20px;
+	left: 0px;
+	-webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;	
+	}
+.object:nth-child(6){
+	top: 20px;
+	left: 50px;
+	-webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+	}
+.object:nth-child(7){
+	top: 30px;
+	left: 0px;	
+	-webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;		
+	}
+.object:nth-child(8){
+	top: 30px;
+	left: 50px;
+	-webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;	
+	}
+.object:nth-child(9){
+	top: 40px;
+	left: 0px;	
+	-webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+	}				
+.object:nth-child(10){
+	top: 40px;
+	left: 50px;	
+	-webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+	}	
+.object:nth-child(11){
+	top: 50px;
+	left: 0px;	
+	-webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+	}				
+.object:nth-child(12){
+	top: 50px;
+	left: 50px;	
+	-webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+	}	
+.object:nth-child(13){
+	top: 60px;
+	left: 0px;	
+	-webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+	}				
+.object:nth-child(14){
+	top: 60px;
+	left: 50px;	
+	-webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+	}	
+.object:nth-child(15){
+	top: 70px;
+	left: 0px;	
+	-webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+	}				
+.object:nth-child(16){
+	top: 70px;
+	left: 50px;	
+	-webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+	}
+.object:nth-child(17){
+	top: 80px;
+	left: 0px;	
+	-webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+	}				
+.object:nth-child(18){
+	top: 80px;
+	left: 50px;	
+	-webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+	}
+.object:nth-child(19){
+	top: 90px;
+	left: 0px;	
+	-webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+	}				
+.object:nth-child(20){
+	top: 90px;
+	left: 50px;	
+	-webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+	}
+
+
+
+@-webkit-keyframes animate_right {
+ 
+
+50% {
+	-ms-transform: translate(200px,-200px) rotate(180deg); 
+   	-webkit-transform: translate(200px,-200px) rotate(180deg); 
+    transform: translate(200px,-200px) rotate(180deg); 
+  }
+	  
+  
+
+}
+
+@keyframes animate_right {
+
+50% {
+	-ms-transform: translate(200px,-200px) rotate(180deg); 
+   	-webkit-transform: translate(200px,-200px) rotate(180deg); 
+    transform: translate(200px,-200px) rotate(180deg); 
+  }
+	 
+	
+	
+	}
+	
+
+
+@-webkit-keyframes animate_left {
+ 
+
+50% {
+	-ms-transform: translate(-200px,-200px) rotate(180deg); 
+   	-webkit-transform: translate(-200px,-200px) rotate(180deg); 
+    transform: translate(-200px,-200px) rotate(180deg); 
+  }
+	  
+  
+
+}
+
+@keyframes animate_left {
+
+50% {
+	-ms-transform: translate(-200px,-200px) rotate(180deg); 
+   	-webkit-transform: translate(-200px,-200px) rotate(180deg); 
+    transform: translate(-200px,-200px) rotate(180deg); 
+  }
+	 
+	
+	
+	}
+
+
+</style>
+
+        <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            function loadPage(iframe) {
+                iframe.addEventListener("load", function () {
+                    //代码能执行到这里说明已经载入成功完毕了
+                    clearTimeout(id);
+                    document.getElementById('loadpagediv').style.display = "none";
+                    this.removeEventListener("load", arguments.call, false);
+                    //这里是回调函数
+                }, false);
+                document.getElementById('loadpagediv').style.display = "block";
+                id = setTimeout('loadPage(iframe)', 100);
+            }
+
+            function echarts_display() {
+                var iframe = document.getElementById('echarts_content')
+                iframe.setAttribute("src", 'echarts.html');
+               
+                loadPage(iframe)
+            }
+
+        function areas_change(th) {
+            if (th == 1) {
+                document.getElementById('wd').value = '刘青云[微博]、林家栋、李小璐[微博]、江一燕[微博]、郭晓东、凤小岳[微博]主演的动作悬疑大片《消失的凶手》公布了一组新的人物海报。';
+            }
+            else if (th == 2)
+                document.getElementById('wd').value = '由成龙[微博]主演的中印合拍动作电影《功夫瑜伽》将于2016年上映。';
+            else if (th == 3)
+                document.getElementById('wd').value = '导演米加顿笑言：“《飓风营救3》中的飞行是其它影片没有的疯狂”。';
+            else if (th == 4)
+                document.getElementById('wd').value = '由陈可辛担任艺术顾问、林爱华执导、陈淼淼担任总制片的爱情轻喜剧《土豪520》定档5月20日。';
+        }
+
+        $(document).ready(function ()
+        {
+            $("#re_extract").click(function ()
+            {
+                var relation_text = document.getElementById("wd").value;
+                if (!relation_text)
+            {
+            alert('请先选择（或输入）影视领域自由文本...')
+            }
+            else
+            {
+                document.getElementById('loadpagediv').style.display = "block";
+                $.post('{% url "RE" %}', { 'relation_text': JSON.stringify(relation_text) }, function (ret) {
+                    echarts_display()
+                }) 
+            }             
+            })
+        });
+        </script>
+
+        <script type="text/javascript">
+            function autoHeight(){
+                var iframe = document.getElementById("echarts_content");//这里括号内的"runtime"其实就是上面的ID，要改成自己上面填写的ID。
+                if(iframe.Document){//ie自有属性
+                    iframe.style.height = iframe.Document.documentElement.scrollHeight;
+                }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
+                    iframe.height = iframe.contentDocument.body.offsetHeight ;
+                }
+            }
+        </script>
+           
+
+
+		<title>{{title}}-RE</title>
+		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+        {% load staticfiles %}
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+        
+		<link href=" {% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="{% static 'fonts/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="{% static 'css/animations.css'%}" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="{% static 'css/style.css'%}" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="{% static 'css/custom.css'%}" rel="stylesheet">
+	</head>
+
+	<body class="no-trans"> 
+
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="{% static 'images/logo.png'%}" alt="FilmRE"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="#banner">FilmRE</a></div>
+								<div class="site-slogan">Film Relation Extraction by <a target="_blank" href="http://htmlcoder.me">MJC</a></div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">Home</a></li>
+												<li><a href="#about">Relation</a></li>
+												<li><a href="#portfolio">Download</a></li>
+												<li><a href="#contact">Contact</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center">Relation <span>Extraction</span></h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">     
+            
+            <div id="loadpagediv" style="display:none">
+                    <div id="loading-center" >
+                    <div id="loading-center-absolute">
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    </div>
+                    </div>
+            </div>
+            <div class="default-bg space blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 id="about" class="title text-center">Relation <span style="color:black;">Extraction</span></h1>
+                         <p>欢迎使用RE可视化演示Demo，如果您对我们的系统有好的建议，请在<a  href="#contact">留言板</a>留下您宝贵的意见</p>
+					</div>
+				</div>
+			</div>
+		    </div>
+            <br>
+            <br>
+			<div class="container">
+
+                <div class="row">
+                    <div class="col-md-9">
+                       <div class="form-group has-feedback">
+							<label class="sr-only" for="message2"></label>
+							<textarea class="form-control" rows=8" id="wd" placeholder="请选择（或输入）影视领域自由文本..." name="wd" style="resize:none;height: 80px;max-height: 80px " required></textarea>
+							<i class="fa fa-pencil form-control-feedback"></i>
+					   </div>
+                    </div>
+
+                    <div class ="col-md-3">
+                        <div class="btn-group-vertical">
+                            <select class=" width-control-60 form-control" id="sentSelect" name="sentSelect"  onchange=" areas_change(this.value);">
+                                <option  value="" selected="selected" disabled="disabled">请选择...</option>
+                                <option value="1">示例文本一</option>
+                                <option value="2">示例文本二</option>
+                                <option value="3">示例文本三</option>
+                                <option value="4">示例文本四</option>
+                            </select>  
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="关系抽取" id='re_extract'>Relation Extraction</button>
+                        </div>            
+                    </div>
+                </div>
+                <div class="space"></div>    
+                 <div class="row">
+                <iframe  id="echarts_content" name="echarts_content"  frameborder="0" scrolling="no" style="border:0px;width:91%;" onload="autoHeight();"></iframe>
+                </div>
+			</div>
+
+            		<!-- section start -->
+			<!-- ================ -->
+			<div class="translucent-bg space blue">
+				<div class="container">
+					<div class="list-horizontal">
+						<div class="row">
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-1.png'%}" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-2.png'%}" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-3.png'%}" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-4.png'%}" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-5.png'%}" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="{% static 'images/client-6.png'%}" alt="client">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- section end -->
+
+
+		</div>
+		<!-- section end -->
+
+
+
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section">
+			<div class="container">
+                <div class="default-bg space black">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+									<h1 class="text-center title" id="portfolio">Download</h1>
+				<div class="separator"></div>
+				<p class="lead text-center">欢迎下载影视领域关系抽取相关API以及算法模型<br>如果您对我们的系统有好的建议，请在<a  href="#contact">留言板</a>留下您宝贵的意见</p>
+					</div>
+				</div>
+			</div>
+		    </div>
+
+
+
+
+				<br>			
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+
+						<!-- isotope filters start -->
+						<div class="filters text-center">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#" data-filter="*">All</a></li>
+								<li><a href="#" data-filter=".web-design">数据分析与处理</a></li>
+								<li><a href="#" data-filter=".app-development">命名实体识别</a></li>
+								<li><a href="#" data-filter=".site-building">关系分类</a></li>
+							</ul>
+						</div>
+						<!-- isotope filters end -->
+
+						<!-- portfolio items start -->
+						<div class="isotope-container row grid-space-20">
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-1.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-1">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">网络爬虫</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-1-label">网络爬虫——语料来源</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>实验数据主要来自各大门户网站影视娱乐相关板块的新闻语料。</p>
+														<p>在构建领域语料库时，首先需要获取该领域文本数据。该程序是爬取数据的脚本文件，欢迎下载使用！</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-1.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-2.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-2">
+											<i class="fa fa-search-plus"></i>
+											<span>命名实体识别</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">实体标注</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-2-label">实体标注——Nertools</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Nertools是一款支持线上多人同时标注的工具。</p>
+														<p>使用Nertools可以快速标注相关语料。欢迎下载使用。</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-2.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-3.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-3">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">分句与分词</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-3-label">分句与分词</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>下载文件包括分句脚本以及各大流行分词工具的整理。</p>
+														<p>本系统使用的分词工具为jieba分词。</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-3.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-4.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-4">
+											<i class="fa fa-search-plus"></i>
+											<span>关系分类</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">无监督抽取</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-4-label">无监督抽取</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>使用无监督抽取方法，正确率高。</p>
+							
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-4.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-5.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-5">
+											<i class="fa fa-search-plus"></i>
+											<span>命名实体识别</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">影视领域命名实体识别模型</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-5-label">影视领域命名实体识别模型</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>影视领域命名实体识别模型，可以识别<br />（1）艺术家名——Na<br />（2）艺术家别名——Nab<br />（3）影视名——Nf<br />（4）出品公司——Nc<br />（5）日期时间——Nd<br />（6）地点——Nl<br />（7）类型(影视)——Nt</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-5.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-6.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-6">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">维基infobox数据</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-6-label">维基infobox数据</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>欢迎下载维基infobox数据应用程序，可以获得某个目录下的wiki页面，并解析获得实体名以及实体名对应的属性关系。</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-6.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-7.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-7">
+											<i class="fa fa-search-plus"></i>
+											<span>关系分类</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">有监督抽取</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-7-label">有监督抽取</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>在有监督抽取部分采用了条件随机场（CRF）以及最大熵（Maxent）模型两个主要方法用于实体关系抽取。</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-7.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-8.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-8">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">数据清洗</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-8-label">数据清洗</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>数据清洗脚本文件</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-8.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-9.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">新词发现与分词字典</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>新词发现</p>
+														<p>分词字典</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-9.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-10.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+											<span>关系分类</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">基于词向量关系抽取</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">基于词向量关系抽取</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>CNN</p>
+														<p>RNN</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-10.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-11.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-11">
+											<i class="fa fa-search-plus"></i>
+											<span>数据分析与处理</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">特征工程</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-11-label">特征工程</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>使用c\c++开发的特征抽取程序</p>
+														<p>抽取包括实体类型等在内的41维特征。</p>
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-11.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{% static 'images/portfolio-12.jpg'%}" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-12">
+											<i class="fa fa-search-plus"></i>
+											<span>命名实体识别</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">实体识别语料</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-12-label">实体识别语料</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>包含训练语料和测试语料。</p>
+							
+													</div>
+													<div class="col-md-6">
+														<img src="{% static 'images/portfolio-12.jpg'%}" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+                                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Download</button>
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+						</div>
+						<!-- portfolio items end -->
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- .footer start -->
+			<!-- ================ -->
+			<div class="footer section">
+				<div class="container">
+					<h1 class="title text-center" id="contact">Contact Us</h1>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<p class="large">使用demo如有任何问题，欢迎随时和我们联系！</p>
+								<ul class="list-icons">
+									<li><i class="fa fa-map-marker pr-10"></i> 中国上海东川路500号华东师范大学</li>
+									<li><i class="fa fa-phone pr-10"></i> 15921933287</li>
+									<li><i class="fa fa-fax pr-10"></i> 021-12345678 </li>
+									<li><i class="fa fa-envelope-o pr-10"></i> mjcica@outlook.com</li>
+								</ul>
+								<ul class="social-links">
+									<li class="facebook"><a target="_blank" href="https://www.facebook.com/pages/HtmlCoder/714570988650168"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+									<li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+									<li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+									<li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+									<li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<form role="form" id="footer-form">
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer end -->
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2015 by <a>M</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="{% static 'plugins/jquery.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="{% static 'plugins/modernizr.js'%}"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="{% static 'plugins/isotope/isotope.pkgd.min.js'%}"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="{% static 'plugins/jquery.backstretch.min.js'%}"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="{% static 'plugins/jquery.appear.js'%}"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="{% static 'js/template.js'%}"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>ECharts</title>
+     {% load staticfiles %}
+    <script> 
+    var entityL = {{entityList|safe}};
+    var relationL = {{relationList|safe}}
+    </script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:450px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'small/smallarAlert.js'%}"></script>
+
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        function get_entityset(){
+            var arr = [];
+            for (var i =0 ;i<entityL.length;i++)
+            {
+                arr.push({ category: entityL[i].category, name:entityL[i].name, value : entityL[i].value});
+            }
+            return arr
+        };
+        function get_relationset(){
+            var arr = [];
+            for(var i =0; i<relationL.length;i++)
+            {
+                arr.push({ source: relationL[i].source, target:relationL[i].target, weight: relationL[i].weight, name: relationL[i].name});
+            }
+            return arr
+        }
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });      
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/force', // 使用柱状图就加载bar模块，按需加载
+                'echarts/chart/chord'  // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));    
+                var option = {
+                    title : {
+                        text: '影视领域关系抽取',
+                        subtext: '图谱数据来自文本输入框',
+                        x:'right',
+                        y:'bottom'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: '{a} : {b}'
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            restore : {show: true},
+                            magicType: {show: true, type: ['force', 'chord']},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    legend: {
+                        x: 'left',
+                        data:['艺术家名','艺术家别名','影视名','出品公司','上映时间','上映地点','影视类型']
+                    },
+                    series : [
+                        {
+                            type:'force',
+                            name : "影视领域关系抽取",
+                            ribbonType: false,
+                            categories : [
+                                {
+                                    name: '艺术家名'
+                                },
+                                {
+                                    name: '艺术家别名'
+                                },
+                                {
+                                    name: '影视名'
+                                },
+                                {
+                                    name: '出品公司'
+                                },
+                                {
+                                    name:'上映时间'
+                                },
+                                {
+                                    name:'上映地点'
+                                },
+                                {
+                                    name:'影视类型'
+                                }
+                            ],
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#333'
+                                        }
+                                    },
+                                    nodeStyle : {
+                                        brushType : 'both',
+                                        borderColor : 'rgba(255,215,0,0.4)',
+                                        borderWidth : 0
+                                    },
+                                    linkStyle: {
+                                        type: 'curve'
+                                    }
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: false
+                                        // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                                    },
+                                    nodeStyle : {
+                                        //r: 30
+                                    },
+                                    linkStyle : {}
+                                }
+                            },
+                            useWorker: false,
+                            minRadius : 15,
+                            maxRadius : 25,
+                            gravity: 1.1,
+                            scaling: 1.1,
+                            roam: 'move',
+                 
+                            nodes:get_entityset(),
+                            links:get_relationset()                    
+                        }
+                    ]
+                };
+                var ecConfig = require('echarts/config');
+                function focus(param) {
+                    var strret ="";
+                    var data = param.data;
+                    var links = option.series[0].links;
+                    var nodes = option.series[0].nodes;
+                    if (
+                        data.source !== undefined
+                        && data.target !== undefined
+                    ) { //点击的是边
+                        alert('fe111')
+                        var sourceNode = nodes.filter(function (n) {return n.name == data.source})[0];
+                        var targetNode = nodes.filter(function (n) {return n.name == data.target})[0];
+                        console.log("选中了边 " + sourceNode.name + ' -> ' + targetNode.name + ' (' + data.weight + ')');
+                    } else { // 点击的是点
+        
+                     $.post('{% url "search" %}', { 'data_name': JSON.stringify(data.name) },function(ret){
+        
+        for(var j =0; j<ret.length;j++)
+        {
+                strret = strret + ret[j].relation+":"+ret[j].entity2+'<br>'
+        }
+        if(strret)
+        {
+                $.MsgBox({type:"confirm",title: data.name,msg:strret,speed:200,userDesign:false,borderColor:"red"});
+        }
+
+        })  
+                        
+                    console.log("选中了" + data.name + '(' + data.value + ')');
+                    }
+                }
+                myChart.on(ecConfig.EVENT.CLICK, focus)
+
+                myChart.on(ecConfig.EVENT.FORCE_LAYOUT_END, function () {
+                    console.log(myChart.chart.force.getPosition());
+                });
+
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>
+</html>
