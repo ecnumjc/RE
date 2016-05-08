@@ -50,3 +50,16 @@ E:\BaiduYunDownload\RelationExtractionDemo\RelationExtractionDemo\bin\Microsoft.
 E:\BaiduYunDownload\RelationExtractionDemo\RelationExtractionDemo\bin\wfastcgi.py
 E:\BaiduYunDownload\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\web.config
 E:\BaiduYunDownload\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\web.debug.config
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\attach_server.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\visualstudio_py_debugger.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\visualstudio_py_repl.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\visualstudio_py_util.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\__init__.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\__main__.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\bin\AzureSetup.cfg
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\bin\wfastcgi.py
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\web.config
+C:\Users\jc\Documents\GitHub\RE\RelationExtractionDemo\RelationExtractionDemo\obj\Debug\web.debug.config
