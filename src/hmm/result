@@ -1,0 +1,10 @@
+------------------------------------
+Forward without scaling 
+log prob(O| model) = -INF
+------------------------------------
+Forward with scaling 
+log prob(O| model) = -NAN
+------------------------------------
+The two log probabilites should identical 
+(within numerical precision). When observation
+sequence is very large, use scaling. 
